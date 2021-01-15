@@ -5,7 +5,8 @@
     text-align:center;
     display:inline-block;
     color:#EDEDF2;
-    background-image:url(images/cardback.png);
+    background:#2F1A41;
+    background-image:url(/images/cardback.png);
     box-shadow:0 0 20px rgba(12,0,31,0.8);
     border-radius:20px;    
     width:750px;
