@@ -1,0 +1,256 @@
+::selection {
+  color: #E998FF;
+  background: #825ba7;
+}
+
+html {
+	scroll-behavior: smooth;
+	overflow-x:hidden;
+	scrollbar-color: #452B5B #20162D;
+	scrollbar-width: auto;
+}
+
+body {
+  background-color:var();
+  background-image:linear-gradient(200deg, #e7beff, #d284ff, #b892ff, #775FC6);
+  background-size:cover;
+  background-attachment:fixed;
+  scroll-behavior: smooth;
+  margin:0;
+}
+
+::-webkit-scrollbar {
+	width: 12.2px;
+  }
+
+  ::-webkit-scrollbar-track {
+	border-radius: 0px;
+	background:#000000
+  }
+  
+  ::-webkit-scrollbar-thumb {
+	background: #333333;
+	border-radius: 100px;
+	border: solid #000000 2px;
+  } 
+
+  ::-webkit-scrollbar-thumb:hover {
+	background: #454545;
+	
+  } 
+  ::-webkit-scrollbar-thumb:active {
+	background: #66666F;
+  } 
+
+.btn {
+  display: inline-block;
+  border-radius:200px;
+  color: white;
+  float:left;
+  background-color:#352147;
+  border:2.5px solid rgba(0,0,0,0);
+  z-index: 5;
+  font-size: 20px;
+  font-weight:700;
+  padding:6px;
+  padding-left:22px;
+  padding-right:22px;
+  font-family: Lato;
+  text-decoration:none;
+  transition: 0.3s cubic-bezier(.25,0,.2,.97);
+  cursor:pointer;
+  outline:none; 
+}
+
+.btn:hover {
+  transform:scale(1.1,1.1);
+  border:2.5px solid #B77CFF;
+  color:#f5ebff;
+  background-color:#4f3069;
+  animation:rainbowloop 2s infinite;
+}
+
+@keyframes rainbowloop{
+  from{}
+  to{filter:hue-rotate(360deg)}
+}
+
+.btn:active {
+  transform:scale(1,1)
+}
+
+.btn i {
+  margin-left:4px;
+}
+
+.sidebar {
+  position:fixed;
+  top:0;
+  width:55px;
+  height:100%;
+  margin:0;
+  z-index:101;
+  padding-left:22px;
+  margin-left:-11px;
+  padding-right:12px;
+  background-color:#181122;
+  border-radius:12px;
+  transition:0.4s cubic-bezier(.2,0,0,1);
+  animation:1s contIn;
+}
+
+#buffer {
+  margin-top:10px;
+}
+
+#buffer span {
+  margin-top:8px;
+}
+
+.sidebar:hover {
+  width:250px;
+  box-shadow:4px 0 50px rgba(0,0,0,0.8);
+}
+
+.sidebar:hover span {
+  display:inline-block
+}
+
+.sidebar a {
+  display:block;
+  text-align:left;
+  font-family:Lato;
+  font-weight:600;
+  height:40px;
+  padding:5px;
+  margin-top:4px;
+  border-radius:15px;
+  color:#e7d7f1;
+  background-color:#2a1d38;
+  transition:0.5s;
+}
+
+.sidebar a:hover {
+  background-color:#372747;
+  transition:0.3s cubic-bezier(0,0,.35,1);
+  transform:translate(5px,0)
+}
+
+.sidebar i {
+  font-size:40px;
+  transform:scale(0.8,0.8);
+  transition:0.2s cubic-bezier(0,0,.35,1);
+}
+
+.sidebar svg {
+  float:left;
+  margin:-12px;
+  transform:translate(2px,0);
+  padding-right:5px;
+}
+
+.sidebar path {
+  fill:#E7D7F1;
+}
+
+.active path {
+  fill:#A977FF
+}
+
+.sidebar span {
+  display:none;
+  color:#C8BDD0;
+  vertical-align:8px;
+  margin-left:5px;
+  font-size:19px;
+  animation:0.5s flyIn cubic-bezier(.2,0,0,1)
+}
+
+.active i, .active span{
+  color:#A977FF;
+}
+
+@keyframes flyIn {
+  0%{opacity:0;}
+  20%{opacity:0; transform:translate(-10px,0)}
+  100%{}
+}
+
+@keyframes navIn {
+  from{opacity:0}
+  to{}
+}
+
+#gradientt {
+  display:inline-table;
+  background:linear-gradient(45deg,#7975FF, #E377FF, #ECA5FF);
+  font-weight:800;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.rainbow {
+  animation:1s rainbow;
+}
+
+@keyframes rainbow {
+  from{filter:hue-rotate(360deg)}
+  to{}
+}
+
+.section {
+  display:inline-block;
+  width:25vw;
+  margin:3px;
+  text-align:left;
+}
+
+.section span, .section h2 {
+  display:inline-block;
+  color:white;
+  background-color:#000000a0;
+  margin:0;
+  margin-top:5px;
+  padding:3px;
+  border-radius:8px;
+}
+
+.section h2 {
+  font-size:40px;
+}
+
+.sectioncontent {
+  position:absolute;
+  width:24vw;
+  margin-left:0.5vw;
+  margin-top:-150px;
+  z-index:10;
+  transition: transform 0.75s ease;
+}
+
+.section {
+  z-index:2;
+  width:25vw;
+  height:25vw;
+  overflow: hidden;
+  border-radius:7%;
+  background-color:black;
+}
+
+.section img {
+  transition: transform 0.75s, opacity 0.5s cubic-bezier(.54,.01,.44,1);
+  width:25vw;
+  border-radius:7%;
+}
+
+.section:hover img {
+  transform: scale(1.2);
+  opacity:.6;
+}
+
+.section:hover .sectioncontent {
+  transform:translate(0,-10px)
+}
