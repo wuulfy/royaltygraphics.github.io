@@ -1,0 +1,84 @@
+body {
+    font-family:lato;
+}
+
+h1 {
+    padding-left:5px;
+    padding-right:5px;
+}
+
+.mid {
+    display: table-cell;
+    vertical-align: middle;
+    text-align:center;
+ }
+
+.mid2 {
+    z-index:-1;
+    display:table;
+    position:absolute;
+    vertical-align:middle;
+    height:100%;
+    width:100%;
+}
+
+.back {
+    display:inline-block;
+    width:78%;
+    padding-bottom:10px;
+    border-radius:20px;
+    background-color:#23152c;
+    animation:0.6s portin cubic-bezier(.37,0,.06,.99)
+}
+
+#one {
+    animation:0.6s one cubic-bezier(.37,0,.06,.99)
+}
+
+@keyframes one {
+    0% {transform:scale(1.2,1.2) translate(-15%,0); opacity:0}
+    10% {transform:scale(1.2,1.2) translate(-15%,0); opacity:0}
+    100% {}
+}
+
+#two {
+    animation:0.7s two cubic-bezier(.37,0,.06,.99)
+}
+
+@keyframes two {
+    0% {transform:scale(1.2,1.2); opacity:0}
+    13% {transform:scale(1.2,1.2); opacity:0}
+    100% {}
+}
+
+#three {
+    animation:0.8s three cubic-bezier(.37,0,.06,.99)
+}
+
+@keyframes three {
+    0% {transform:scale(1.2,1.2) translate(15%,0); opacity:0}
+    17% {transform:scale(1.2,1.2) translate(15%,0); opacity:0}
+    100% {}
+}
+
+@keyframes portin {
+    from{transform:scale(0.9,0.9); opacity:0;}
+    to{}
+}
+
+h1 {
+    display:inline-block;
+    border-radius:10px;
+    color:black;
+    margin:0;
+    margin-top:15px;
+    margin-bottom:0px;
+    background-color:#bc7dff;
+}
+
+#fore {
+    color:white;
+    font-size:20px;
+    line-height:30px;
+}
+

@@ -43,7 +43,6 @@ body {
   } 
 
 .btn {
-  display: inline-block;
   border-radius:200px;
   color: white;
   float:left;
@@ -52,7 +51,7 @@ body {
   z-index: 5;
   font-size: 20px;
   font-weight:700;
-  padding:6px;
+  padding:8px;
   padding-left:22px;
   padding-right:22px;
   font-family: Lato;
@@ -85,7 +84,6 @@ body {
 
 .sidebar {
   position:fixed;
-  top:0;
   width:55px;
   height:100%;
   margin:0;
@@ -107,13 +105,30 @@ body {
   margin-top:8px;
 }
 
+.social {
+  position:fixed;
+  bottom:10px;
+}
+
+.social {
+  width:55px;
+  transition:0.4s cubic-bezier(.2,0,0,1);
+}
+
+.sidebar:hover .social {
+  width:250px;
+}
+
 .sidebar:hover {
   width:250px;
-  box-shadow:4px 0 50px rgba(0,0,0,0.8);
 }
 
 .sidebar:hover span {
   display:inline-block
+}
+
+.sidebar .fa-discord {
+  margin-left:3.5px;
 }
 
 .sidebar a {
@@ -138,6 +153,7 @@ body {
 
 .sidebar i {
   font-size:40px;
+  width:40px;
   transform:scale(0.8,0.8);
   transition:0.2s cubic-bezier(0,0,.35,1);
 }
@@ -201,17 +217,10 @@ body {
   to{}
 }
 
-.section {
-  display:inline-block;
-  width:25vw;
-  margin:3px;
-  text-align:left;
-}
-
 .section span, .section h2 {
   display:inline-block;
   color:white;
-  background-color:#000000a0;
+  background-color:#000000c0;
   margin:0;
   margin-top:5px;
   padding:3px;
@@ -237,7 +246,10 @@ body {
   height:25vw;
   overflow: hidden;
   border-radius:7%;
-  background-color:black;
+  display:inline-block;
+  margin:3px;
+  text-align:left;
+  background-color:#14081b;
 }
 
 .section img {
@@ -254,3 +266,181 @@ body {
 .section:hover .sectioncontent {
   transform:translate(0,-10px)
 }
+
+.warning {
+  position:fixed;
+  cursor:default;
+  right:20px;
+  width:300px;
+  bottom:20px;
+  font-family:lato;
+  font-weight:600;
+  font-size:20px;
+  text-align:center;
+  z-index:9000;
+  padding:12px;
+  border-radius:50px;
+  background-color:#301A42dd;
+  color:#E88FFF;
+  box-shadow: 0 0 20px black;
+}
+
+.footer {
+  position:absolute;
+  display:block;
+  margin-top:40px;
+  padding-top:15px;
+  padding-bottom:10px;
+  width:60%;
+  padding-right:20%;
+  padding-left:20%;
+  background-color:#20162D;
+  text-align:center;
+  color:#b3a8b5;
+}
+
+.footer span {
+  font-size:20px !important;
+}
+
+.footer a {
+  color:#b3a8b5;
+  text-decoration:none;
+  padding-top:3px;
+  display:block;
+}
+
+.footer a:hover {
+  color:white;
+  font-weight:600;
+  text-decoration:underline;
+}
+
+.footer h2 {
+  margin:0;
+  font-size:28px;
+}
+
+.footer i {
+  font-size: 25px;
+  width:35px;
+  vertical-align:middle
+}
+
+.sector {
+  float:left;
+  width:30%;
+  margin:5px;
+  text-align:left;
+}
+
+@keyframes contIn {
+  from{opacity:0;}
+  to{opacity:1;}
+}
+
+@media only screen and (orientation: portrait) {
+  .sidebar {
+    width:100vw;
+    height:80px;
+    right:-12px;
+    padding-left:10px;
+    padding-right:20px;
+    bottom:0;
+    position:fixed;
+    padding:0;
+    margin:0;
+    text-align:center;
+    border-radius:0px;
+    transition:none;
+    animation:1s contIn;
+  }
+
+  #buffer {
+    margin-top:0;
+    vertical-align:top;
+  }
+  
+  #buffer span {
+    margin-top:0;
+  }
+
+  .sidebar:hover .social {
+    width:55px;
+  }
+  
+  .sidebar:hover {
+    width:55px;
+  }
+  
+  .sidebar span {
+    position:absolute;
+    transform:translate(-60px,50px);
+    display:inline-block !important;
+  }
+
+  .social {
+    width:300px;
+    height:80px;
+    transition:0.4s cubic-bezier(.2,0,0,1);
+  }
+
+  .social i {
+    font-size:5px;
+  }
+
+  .sidebar:hover .social {
+    width:300px;
+    height:80px;
+  }
+  
+  .sidebar:hover {
+    width:100vw;
+  }
+  
+  .sidebar a {
+    display:inline-block;
+    text-align:center;
+    height:80px;
+    margin:0;
+    width:27%;
+    margin-right:-2px;
+    margin-left:-2px;
+    border-radius:0;
+    color:#e7d7f1;
+    background-color:#2a1d38;
+    transition:0.15s;
+  }
+  
+  .sidebar a:hover {
+    transform:translate(0,0);
+    background-color: #342446;
+  }
+  
+  .sidebar i {
+    font-size:40px;
+    width:40px;
+    transform:scale(0.8,0.8);
+    transition:0s cubic-bezier(0,0,.35,1);
+  }
+  
+  .sidebar svg {
+    float:unset;
+    margin:0;
+    transform:translate(0,0);
+    padding-right:0;
+  }
+  
+  .sidebar span {
+    display:none;
+    color:#C8BDD0;
+    vertical-align:8px;
+    margin-left:5px;
+    font-size:19px;
+    animation:0.5s flyIn cubic-bezier(.2,0,0,1)
+  }
+  
+  .active i, .active span { 
+    color:#A977FF;
+  }
+  }

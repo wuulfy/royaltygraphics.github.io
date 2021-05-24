@@ -4,7 +4,7 @@ var TxtType = function(el, toRotate, period) {
     this.loopNum = 0;
     this.period = parseInt(period, 10) || 2000;
     this.txt = '';
-    this.tick();
+    this.tick();9
     this.isDeleting = false;
 };
 
